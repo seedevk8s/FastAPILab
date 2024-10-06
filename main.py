@@ -32,8 +32,8 @@ def detect_objects(image: Image.Image):
             cv2.putText(img, f'{label} {confidence:.2f}',
                         (x1,y1), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255,0,0), 2)
 
-            result_image = Image.fromarray(img)
-            return result_image
+    result_image = Image.fromarray(img)
+    return result_image
 
 
 @app.get('/')
